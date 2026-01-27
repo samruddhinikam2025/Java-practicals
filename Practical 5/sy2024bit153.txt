@@ -1,0 +1,71 @@
+class sy2024bit153 {
+    public static void main(String[] args) {
+
+        int n = 3;
+        String star = "*";
+        String spc = " ";
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println(
+                (star.repeat(i) + spc.repeat(n - i)) +
+                spc +
+                (spc.repeat(n - i) + star.repeat(i))
+            );
+        }
+        System.out.println(star.repeat(2 * n + 1));
+        System.out.println();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println(
+                spc.repeat(i - 1) +
+                star.repeat(n - i + 1) +
+                star.repeat(i - 1) +
+                spc.repeat(n - i)
+            );
+        }
+        System.out.println();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.println(
+                spc.repeat(n - i) +
+                (star + spc).repeat(i).trim()
+            );
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            System.out.println(
+                spc.repeat(n - i) +
+                (star + spc).repeat(i).trim()
+            );
+        }
+        System.out.println();
+
+        for (int i = 1; i <= n; i++) {
+            int num = i;
+            System.out.print(spc.repeat(n - i));
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + spc.repeat(2));
+                num++;
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 1; i--) {
+            int num = i;
+            System.out.print(spc.repeat(n - i));
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + spc.repeat(2));
+                num++;
+            }
+            System.out.println();
+        }
+        System.out.println();
+
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println();
+        }
+    }
+}
